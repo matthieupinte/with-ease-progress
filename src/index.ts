@@ -14,27 +14,27 @@ export interface ProgressOptions {
 
 const DEFAULT_MIN_DURATION = 2000;
 
-export function withProgress<T>(
+export function withEaseProgress<T>(
   task: Task<T>,
   options?: ProgressOptions,
 ): Promise<T>;
 
-export function withProgress(
+export function withEaseProgress(
   options: ProgressOptions,
 ): <T>(task: Task<T>) => Promise<T>;
 
-export function withProgress<T>(
+export function withEaseProgress<T>(
   arg1: Task<T> | ProgressOptions,
   arg2?: ProgressOptions,
 ) {
   if (typeof arg1 === "function") {
-    return runWithProgress(arg1, arg2);
+    return runWithEaseProgress(arg1, arg2);
   }
 
-  return <T>(task: Task<T>) => runWithProgress(task, arg1);
+  return <T>(task: Task<T>) => runWithEaseProgress(task, arg1);
 }
 
-async function runWithProgress<T>(
+async function runWithEaseProgress<T>(
   task: Task<T>,
   options: ProgressOptions = {},
 ): Promise<T> {

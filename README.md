@@ -21,10 +21,10 @@ yarn add with-ease-progress
 ### Direct
 
 ```typescript
-import { withProgress } from "with-ease-progress";
+import { withEaseProgress } from "with-ease-progress";
 
 // Simulate an async task
-await withProgress(
+await withEaseProgress(
   async (update) => {
     for (let i = 0; i <= 100; i += 10) {
       await new Promise(r => setTimeout(r, 100));
@@ -51,7 +51,7 @@ await withProgress(
 ### Curryable (functional-friendly)
 
 ```typescript
-const uploadWithProgress = withProgress({
+const uploadWithProgress = withEaseProgress({
   minDuration: 1500,
   onProgress: p => console.log(p),
 });
