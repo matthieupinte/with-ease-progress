@@ -1,0 +1,32 @@
+{
+  "name": "with-ease-progress",
+  "version": "0.1.0",
+  "description": "Smooth progress tracking for async tasks",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthieupinte/with-ease-progress.git"
+  },
+  "keywords": [
+    "progress",
+    "async",
+    "task",
+    "smooth",
+    "ease",
+    "typescript",
+    "javascript"
+  ],
+  "author": "Matthieu Pinte",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}

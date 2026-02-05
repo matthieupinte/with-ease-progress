@@ -1,0 +1,66 @@
+# with-ease-progress
+
+Smooth progress tracking for async tasks in JavaScript/TypeScript.
+
+## Installation
+
+```bash
+npm install with-ease-progress
+# or
+yarn add with-ease-progress
+```
+
+## Usage
+
+### Direct
+
+```typescript
+import { withProgress } from "with-ease-progress";
+
+// Simulate an async task
+await withProgress(
+  async (update) => {
+    for (let i = 0; i <= 100; i += 10) {
+      await new Promise(r => setTimeout(r, 100));
+      update({ loaded: i, total: 100 });
+    }
+  },
+  {
+    minDuration: 2000,
+    onProgress: (p) => console.log("Progress:", p + "%"),
+  }
+);
+
+// Output:
+//   Progress: 10%
+//   Progress: 25%
+//   Progress: 40%
+//   ...
+```
+
+- `update` is a function that accepts an object `{ loaded: number, total: number }`
+- `onProgress` is called with the smooth progress percentage
+- `minDuration` ensures the progress bar moves smoothly even if the task finishes quickly
+
+### Curryable (functional-friendly)
+
+```typescript
+const uploadWithProgress = withProgress({
+  minDuration: 1500,
+  onProgress: p => console.log(p),
+});
+
+await uploadWithProgress(update => uploadFile(update));
+```
+
+### Features
+
+- Works with any async task
+- Smooth progress updates, prevents jumps
+- Supports TypeScript and provides typings
+- Functional-friendly / curryable usage
+- ESM + CJS compatible
+
+### License
+
+MIT
