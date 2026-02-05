@@ -1,6 +1,12 @@
 # with-ease-progress
 
+[![npm version](https://img.shields.io/npm/v/with-ease-progress)](https://www.npmjs.com/package/with-ease-progress)
+[![license](https://img.shields.io/npm/l/with-ease-progress)](LICENSE)
+[![downloads](https://img.shields.io/npm/dm/with-ease-progress)](https://www.npmjs.com/package/with-ease-progress)
+
 Smooth progress tracking for async tasks in JavaScript/TypeScript.
+
+This small utility ensures a minimum progress duration and smooth updates, perfect for tracking task progress in a user-friendly way.
 
 ## Installation
 
