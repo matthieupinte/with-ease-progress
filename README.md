@@ -8,6 +8,23 @@ Smooth progress tracking for async tasks in JavaScript/TypeScript.
 
 This small utility ensures a minimum progress duration and smooth updates, perfect for tracking task progress in a user-friendly way.
 
+## Demo
+
+<table>
+  <tr>
+    <td><b>Before</b></td>
+    <td><b>After</b> <code>{ minDuration: 2000 } // 2s</code></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="assets/before.gif" alt="Avant" width="320" />
+    </td>
+    <td>
+      <img src="assets/after.gif" alt="Après" width="320" />
+    </td>
+  </tr>
+</table>
+
 ## Installation
 
 ```bash
